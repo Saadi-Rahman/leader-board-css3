@@ -110,7 +110,7 @@ hr {
 .course {
     width: 240px;
     border-radius: 5px;
-    box-shadow: 3px 3px 5px #d9d9d9;
+    box-shadow: 3px 3px 5px #ebebeb;
     padding: 15px;
 }
 
@@ -164,6 +164,50 @@ hr {
     color: #ED6B4F;
     margin-left: 5px;
 }
+
+
+/* ----------- Media Queries -------------- */
+
+/* Mobile Devices */
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+
+    .players, .blogs, .courses {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .player, .blog {
+        flex-direction: column;
+    }
+
+    .courses {
+        row-gap: 24px;
+        justify-items: center;
+    }
+}
+
+/* Tablet Devices */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    .players, .courses {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .courses {
+        row-gap: 24px;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+    }
+}
+
 
 
 
